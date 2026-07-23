@@ -9,7 +9,7 @@ const stations = [
     code: "01",
     title: "Ops / PM Intern",
     org: "Optum (UHG)",
-    summary: "First real exposure to how large organizations run projects — and how much money gets saved by simply removing friction.",
+    summary: "First real exposure to how large organizations run projects and how much money gets saved by simply removing friction.",
     bullets: [
       "Supported project management work tied to an estimated $20M in client savings.",
     ],
@@ -20,7 +20,7 @@ const stations = [
     code: "02",
     title: "Supply Chain & Category Mgmt",
     org: "Medtronic",
-    summary: "Interned, then joined full-time. Built early Power BI dashboards, then took a stretch assignment negotiating supplier contracts — the closest thing to 'sourcing physical components' in this line.",
+    summary: "Interned, then joined full-time. Built early Power BI dashboards, then took a stretch assignment negotiating supplier contracts, the closest thing to 'sourcing physical components' in this line.",
     bullets: [
       "Built and managed 10+ Power BI dashboards and multiple Power Apps tools.",
       "Negotiated contracts for a ~$17M component portfolio as Category Manager.",
@@ -32,7 +32,7 @@ const stations = [
     year: "2022–2023",
     code: "03",
     title: "Analytics Developer",
-    org: "Medtronic — Advanced Analytics",
+    org: "Medtronic - Advanced Analytics",
     summary: "A reorg landed me on a centralized analytics team, and this is where I found the technical side I actually wanted to chase.",
     bullets: [
       "Shipped Supply Planning, GSM, and Direct Spend & Inflation analytics.",
@@ -43,9 +43,9 @@ const stations = [
     id: "senior",
     year: "2023–2025",
     code: "04",
-    title: "Senior Analyst → Product Owner",
-    org: "Medtronic — Advanced Analytics",
-    summary: "Kept building while learning to lead — balancing hands-on development with the product-owner skillset of prioritization and stakeholder alignment.",
+    title: "Senior Analyst → Senior Product Owner",
+    org: "Medtronic - Advanced Analytics",
+    summary: "Kept building while learning to lead - balancing hands-on development with the product-owner skillset of prioritization and stakeholder alignment.",
     bullets: [
       "Led the Open PO Pipeline analytic, contributing to $400M in inventory cost avoidance.",
       "Launched products drawing ~17K views in 30 days across major releases.",
@@ -57,10 +57,10 @@ const stations = [
     year: "2025–Present",
     code: "05",
     title: "Principal Product Owner",
-    org: "Medtronic — Advanced Analytics",
+    org: "Medtronic - Advanced Analytics",
     summary: "Now leading squad-level technical strategy while going back to school to sharpen the engineering side.",
     bullets: [
-      "Co-led the Strategic PAR Dashboard, tied to $12M+ ROI over two fiscal years.",
+      "Co-led the Strategic PAR Dashboard, tied to $12M+ ROI over two fiscal years for Field Inventory.",
       "Sponsors AI-readiness and technical-debt work across the analytics ecosystem.",
       "Serves as an AI adoption champion (GitHub Copilot, Cursor) for the org.",
     ],
@@ -123,6 +123,45 @@ function activateStation(id) {
   });
 
   renderDetail(station);
+}
+
+// =========================================================
+// THEME TOGGLE
+// =========================================================
+
+const THEME_KEY = "site-theme";
+const root = document.documentElement;
+const themeToggle = document.getElementById("themeToggle");
+
+function applyTheme(theme) {
+  root.setAttribute("data-theme", theme);
+  const isDark = theme === "inverse-dark";
+
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light mode" : "Switch to inverse dark mode"
+    );
+    themeToggle.title = isDark ? "Light mode" : "Inverse dark mode";
+  }
+}
+
+function getInitialTheme() {
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved === "light" || saved === "inverse-dark") return saved;
+  return "light";
+}
+
+applyTheme(getInitialTheme());
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme") || "light";
+    const next = current === "light" ? "inverse-dark" : "light";
+    applyTheme(next);
+    localStorage.setItem(THEME_KEY, next);
+  });
 }
 
 renderStations();
