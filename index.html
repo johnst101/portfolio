@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tyler Johnson — Builder, Generalist, Curious by Default</title>
+<meta name="description" content="Tyler Johnson — Product owner turned builder, pivoting from analytics leadership into hands-on software engineering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">TJ<span class="nav-mark-dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#journey">Journey</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-resume" href="assets/Tyler_Johnson_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="work-order-tag">WORK ORDER № 001 — TYLER JOHNSON</p>
+      <h1 class="hero-title">Curious by default.<br>Deep when it counts.</h1>
+      <p class="hero-sub">
+        I spent four years as a Product Owner turning ambiguous business problems into
+        analytics people actually used. Now I'm in graduate school for Big Data Systems,
+        writing more of the code myself — and looking for where that combination is
+        useful next: engineering, data platforms, technical product work, or something
+        I haven't found yet.
+      </p>
+      <div class="hero-actions">
+        <a href="#journey" class="btn btn-primary">See how I got here</a>
+        <a href="#work" class="btn btn-ghost">View projects</a>
+      </div>
+      <div class="hero-links">
+        <a href="https://github.com/johnst101" target="_blank" rel="noopener">GitHub</a>
+        <span class="dot">·</span>
+        <a href="https://www.linkedin.com/in/tyler-j-13963886/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="dot">·</span>
+        <a href="mailto:tylercjohnson16@gmail.com">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY / SIGNATURE ASSEMBLY LINE ============ -->
+  <section class="journey" id="journey">
+    <div class="section-head">
+      <p class="eyebrow">The Assembly Line</p>
+      <h2>From sourcing components to building them.</h2>
+      <p class="section-sub">
+        Before I managed data products, I managed physical ones — negotiating supplier
+        contracts and category strategy for a $17M component portfolio. The line below
+        traces how that turned into building software. Click a station for detail.
+      </p>
+    </div>
+
+    <div class="assembly-wrap">
+      <div class="assembly-line" id="assemblyLine" role="list">
+        <!-- stations injected by JS -->
+      </div>
+      <div class="assembly-detail" id="assemblyDetail" aria-live="polite">
+        <p class="assembly-detail-placeholder">↑ Select a station on the line to expand its details.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="work" id="work">
+    <div class="section-head">
+      <p class="eyebrow">Parts Catalog</p>
+      <h2>Things I've built.</h2>
+      <p class="section-sub">A mix of shipped and in-progress work — real problems I wanted solved, built end to end.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="status-tag status-live">LIVE</span>
+          <h3>3DSearch.org</h3>
+        </div>
+        <p class="project-desc">
+          A search engine that aggregates and indexes 3D models from the top model
+          marketplaces into one place, so you stop tab-hopping to find the asset you need.
+        </p>
+        <ul class="chip-list">
+          <li>Django</li><li>Python</li><li>React</li><li>TypeScript</li>
+          <li>PostgreSQL</li><li>Docker</li><li>AWS</li><li>Nginx</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://3dsearch.org/" target="_blank" rel="noopener">Visit site ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="status-tag status-progress">IN PROGRESS</span>
+          <h3>MyCask</h3>
+        </div>
+        <p class="project-desc">
+          A personal whiskey collection manager: scan a bottle's barcode to log it,
+          get intelligent recommendations based on what's in your collection, and
+          track pricing insights over time.
+        </p>
+        <ul class="chip-list">
+          <li>FastAPI</li><li>Python</li><li>React</li><li>JavaScript</li><li>PostgreSQL</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/johnst101/MyCask" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="status-tag status-live">LIVE</span>
+          <h3>ForeTheMoney</h3>
+        </div>
+        <p class="project-desc">
+          A golf pool app: players draft six golfers across weekly tiers and compete
+          on real PGA Tour earnings all season — built because our friend group's
+          spreadsheet version couldn't keep up.
+        </p>
+        <ul class="chip-list">
+          <li>FastAPI</li><li>Python</li><li>HTML/CSS/JS</li><li>NeonDB</li><li>Docker</li><li>AWS</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/johnst101/ForeTheMoney" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="section-head about-head">
+        <p class="eyebrow">About</p>
+        <h2>The longer version.</h2>
+      </div>
+      <div class="about-body">
+        <p>
+          I grew up outside Milwaukee and moved to Minneapolis in 2017 for the
+          University of Minnesota, where I double-majored in Supply Chain &amp;
+          Operations Management and Management Information Systems. Along the way
+          I interned in project management at Optum, then in supply management at
+          Medtronic — an internship that turned into a full-time offer.
+        </p>
+        <p>
+          I spent a year and a half building analytics inside Medtronic's supply
+          organization, with a stretch assignment as a Category Manager on the side.
+          A reorganization moved me into a centralized analytics team, where I found
+          I genuinely liked the technical side — two years as a Power BI developer
+          and data engineer, before shifting into product ownership to learn that
+          discipline too.
+        </p>
+        <p>
+          Now I'm a Principal Advanced Analytics Product Owner by day and a
+          graduate student in Big Data Systems by night, and I'm ready to point
+          both back toward hands-on building. I'm not trying to stay boxed into
+          data — I'm a generalist who goes wide by default and deep when something
+          earns it.
+        </p>
+        <p class="about-interests">
+          <span>Outside of work:</span> investing, real estate, mentoring through my
+          fraternity's alumni board, golf, and hockey.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills" id="skills">
+    <div class="section-head">
+      <p class="eyebrow">Bill of Materials</p>
+      <h2>What I work with.</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Build</h3>
+        <ul>
+          <li>Python</li><li>SQL</li><li>React / TypeScript</li>
+          <li>FastAPI</li><li>Django</li><li>JavaScript</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Ship</h3>
+        <ul>
+          <li>Docker</li><li>AWS</li><li>Nginx</li>
+          <li>Azure DevOps</li><li>Git</li><li>PostgreSQL / Oracle</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Analyze</h3>
+        <ul>
+          <li>Power BI</li><li>Statistical Modeling</li>
+          <li>Data Modeling</li><li>Power Apps</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h3>Lead</h3>
+        <ul>
+          <li>Product Ownership</li><li>Stakeholder Management</li>
+          <li>Roadmapping</li><li>Mentoring &amp; Onboarding</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER / CONTACT ============ -->
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <p class="footer-title">Let's talk.</p>
+      <p class="footer-sub">Open to conversations about engineering, data platform, and technical product roles.</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:tylercjohnson16@gmail.com">tylercjohnson16@gmail.com</a>
+      <a href="https://www.linkedin.com/in/tyler-j-13963886/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/johnst101" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="assets/Tyler_Johnson_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+    </div>
+  </div>
+  <p class="footer-fine">Built by Tyler Johnson — HTML, CSS &amp; JS, no framework, deployed as a static site.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
