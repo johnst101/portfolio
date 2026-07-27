@@ -18,7 +18,7 @@ const stations = [
     id: "supplychain",
     year: "2020–2022",
     code: "02",
-    title: "Supply Chain & Category Mgmt",
+    title: "Supply Analytics & Category Mgmt",
     org: "Medtronic",
     summary: "Interned, then joined full-time. Built early Power BI dashboards, then took a stretch assignment negotiating supplier contracts, the closest thing to 'sourcing physical components' in this line.",
     bullets: [
@@ -173,4 +173,4 @@ lineEl.addEventListener("click", (e) => {
 });
 
 // Default: open the most recent station so the detail panel isn't empty on load
-activateStation(stations[stations.length - 1].id);
+activateStation(stations[0].id);
